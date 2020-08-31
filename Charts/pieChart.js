@@ -12,15 +12,26 @@ const pie = new Vue({
             },
             labels: [],
             responsive: [{
-                breakpoint: 300,
+                breakpoint: 350,
                 options: {
                     chart: {
-                        width: 200
+                        width: 300 ,
                     },
                     legend: {
                         position: 'bottom'
                     }
-                }
+                }},
+                {
+                    breakpoint: 570,
+                    options: {
+                        chart: {
+                            width: 500 ,
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                
             }],
             title: {
                 text: 'Porcentaje de ventas históricas',
