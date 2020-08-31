@@ -4,7 +4,7 @@ const app = new Vue({
         apexchart: VueApexCharts,
     },
     data: {
-        titulo : 'Ventas',
+        titulo : 'Ventas según ítem ',  
         dropdown : 'Período',
         historical: historical,
         daily: daily,
@@ -20,7 +20,7 @@ const app = new Vue({
                 type: 'bar',
             },
             title: {
-                text: 'Ventas según ítem',
+                text: 'Ventas según ítem ',
                 align: 'left'
             },
             plotOptions: {

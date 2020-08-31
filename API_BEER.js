@@ -5,6 +5,10 @@ var historical = [
         "amount": 2500 * 2,
     },
     {
+        "name": "Scott",
+        "amount": 2500 * 2,
+    },
+    {
         "name": "APA",
         "amount": 3000 * 2,
     },
@@ -18,7 +22,7 @@ var historical = [
     },
     {
         "name": "Lager",
-        "amount": 250 * 2,
+        "amount": 700 * 2,
     },
     {
         "name": "Stout",
