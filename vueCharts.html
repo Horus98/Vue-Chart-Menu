@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/3236/3236450.png" type="image/x-icon">
+    <title>Gráficos</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <!-- Basic dropdown -->
+                    <button class="btn btn-sm btn-pink btn-block mt-3 dropdown-toggle " type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{dropdown}}</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" type="button" @click="getData(daily,'Diario')">Diario</a>
+                        <a class="dropdown-item" @click="getData(weekly,'Semanal')">Semanal</a>
+                        <a class="dropdown-item" @click="getData(monthly,'Mensual')">Mensual</a>
+                        <a class="dropdown-item" @click="getData(yearly,'Anual')">Anual</a>
+                        <a class="dropdown-item" @click="getData(historical,'Histórico')">Historico</a>
+                    </div>
+                </div>
+            </div>
+            <div id="chart" class="mt-5">
+                <apexchart type="bar" height="350" :options="chartOptions" :series="series" style="cursor: pointer;"></apexchart>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5"></div>
+    <div class="container">
+        <div id="linear">
+            <div id="linear-chart">
+                <apexchart type="line" height="350" :options="chartOptions" :series="series" style="cursor: pointer;"></apexchart>
+            </div>
+        </div>
+        <div class="mt-5"></div>
+        <div id="pie">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 d-flex justify-content-center">
+                    <apexchart type="pie" width="575" :options="chartOptions" :series="series" style="cursor: pointer;"></apexchart>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js">
+</script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<script src="API_BEER.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="Charts/barChart.js"></script>
+<script src="Charts/linearChart.js"></script>
+<script src="Charts/pieChart.js"></script>
+
+<script>
+
+</script>
+
+</html>
